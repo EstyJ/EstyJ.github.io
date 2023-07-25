@@ -1,0 +1,181 @@
+#main{
+  flex-direction: column;
+}
+#main h1{
+  color: teal;
+  text-shadow: 0px 0px 10px rgba(0, 128, 128, 0.4);
+}
+#contact{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+#form{
+  width: 30%;
+  /* background-color: pink; */
+}
+fieldset{
+  padding: 15px;
+}
+legend{
+  font-size: 20px;
+}
+#user-details div input{
+  padding: 3px 5px;
+  font-size: 17px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+textarea{
+  padding: 3px;
+  outline: none;
+  width: 25em;
+  height: 8em;
+  border: 1px solid black;
+}
+#buttons button{
+  padding: 5px 15px;
+  background-color: teal;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#buttons button:hover{
+  scale: 0.85;
+}
+#buttons button:active{
+  scale: 1.1;
+}
+#socials{
+  width: 40%;
+  height: 250px;
+  border-radius: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#socials a{
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+i{
+  color: teal;
+  font-size: 20px;
+  z-index: 2;
+  transition: all 0.4s ease-in-out;
+}
+#socials a::before{
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 0%;
+  height: 0%;
+  background-color: teal;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in-out;
+}
+#socials a:hover{
+  border: 2px solid white;
+}
+#socials a:hover i{
+  color: white;
+}
+#socials a:hover::before{
+  animation: design 0.3s linear 0s 1 forwards;
+}
+@keyframes design {
+  50%{
+    width: 60%;
+    height: 60%;
+  }
+  100%{
+    width: 120%;
+    height: 120%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  textarea{
+    width: 20em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #socials{
+    width: 20%;
+    flex-direction: column;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 756px){
+  #main{
+    height: 90% !important;
+  }
+  .curve-box{
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  #form{
+    width: 40%;
+  }
+  #socials{
+    width: 30%;
+    flex-direction: column;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 699px) {
+  #contact{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 75%;
+  }
+  #form{
+    width: 70%;
+  }
+  
+  #socials{
+    flex-direction: row;
+    height: 70px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  #main{
+    width: 90%;
+    height: 80%;
+  }
+  #form{
+    width: 90%;
+  }
+  fieldset{
+    padding: 5px;
+  }
+  textarea{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 376px) {
+  #body{
+    height: 110vh;
+  }
+}

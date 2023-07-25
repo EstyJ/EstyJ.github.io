@@ -1,0 +1,288 @@
+#main{
+  flex-direction: column;
+}
+#rate{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+#rate .languages{
+  width: 15%;
+  cursor: pointer;
+}
+#rate .languages div{
+  width: 100%;
+  height: 15px;
+  margin: 5px 0px;
+  border: 1px solid black;
+  border-radius: 30px;
+  position: relative;
+}
+#rate .languages .c::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  border-radius: 30px;
+  background-color: teal;
+  box-shadow: 0px 0px 10px rgba(0, 128, 128, 1);
+  cursor: pointer;
+  animation: length 2s ease-in 0s 2 forwards;
+}
+@keyframes length {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+}
+
+
+#rate .languages .py::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  border-radius: 30px;
+  background-color: teal;
+  box-shadow: 0px 0px 10px rgba(0, 128, 128, 1);
+  cursor: pointer;
+  animation: pyLength 2s ease-in-out 0s 2 forwards;
+}
+@keyframes pyLength {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 30%;
+  }
+}
+#rate .languages .xml::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  border-radius: 30px;
+  background-color: teal;
+  box-shadow: 0px 0px 10px rgba(0, 128, 128, 1);
+  cursor: pointer;
+  animation: xmlLength 2s ease-in-out 0s 2 forwards;
+}
+@keyframes xmlLength {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 85%;
+  }
+}
+#rate .languages .css::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  border-radius: 30px;
+  background-color: teal;
+  box-shadow: 0px 0px 10px rgba(0, 128, 128, 1);
+  animation: cssLength 2s ease-in-out 0s 2 forwards;
+  cursor: pointer;
+}
+@keyframes cssLength {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 75%;
+  }
+}
+
+#pop{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#pop .box-image{
+  width: 25%;
+  height: 200px;
+  opacity: 0;
+  animation: pop 1s ease-in-out 0s 1 forwards;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+}
+#pop .box-image:hover{
+  cursor: pointer;
+}
+.box-image.scale2{
+  animation-delay: 0.5s !important;
+}
+.box-image.scale3{
+  animation-delay: 1s !important;
+}
+.box-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+}
+.intro{
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.intro h2{
+  font-size: 20px;
+  margin: 10px 5px;
+}
+.intro p{
+  font-size: clamp(0.5rem, 0.7rem + 0.5rem, 0.9rem);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+#pop .box-image:hover img{
+  transform: scale(1.1) rotate(-3deg);
+  border-radius: 30px;
+}
+
+#pop .box-image:hover .intro{
+  height: 80%;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#pop .box-image:hover p{
+  visibility: visible;
+  opacity: 1;
+  padding: 5px 0px;
+}
+#display{
+  display: none;
+}
+@keyframes pop {
+  0%{
+    scale: 0.8;
+    opacity: 0;
+  }
+  100%{
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 850px){
+  #rate{
+    display: grid;
+    width: 100%;
+    height: 30%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 5px;
+  }
+  #rate .languages{
+    width: 100%;
+  }
+  .curve-box{
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 756px){
+  #pop{
+    display: none;
+  }
+  .curve-box{
+    display: none;
+  }
+  #display{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+  }
+  #control{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #instruction{
+    font-size: clamp(0.8rem, 1.2rem + 0.8rem, 1.2rem);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    scale: 0.1;
+    animation: long 10s ease-in 1s 1 forwards;
+  }
+  .pic{
+    width: 100%;
+    height: 85%;
+    margin: 10px 0px;
+    display: none;
+    padding: 10px 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .img-sample{
+    width: 80%;
+    height: 150px;
+    background-color: #000;
+    margin: 20px auto;
+  }
+  h3{
+    text-align: center;
+    font-size: 25px;
+  }
+  @keyframes long {
+    3%{
+      opacity: 1;
+      scale: 0.1;
+    }
+    5%{
+      scale: 1;
+    }
+    100%{
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+@media screen and (max-width: 376px) {
+  #body{
+    height: 120vh;
+  }
+  #main{
+    height: 90%;
+  }
+}
+@media screen and (max-width: 500px){
+  #rate{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (max-width: 400px){
+  h3{
+    font-size: 20px;
+  }
+}
