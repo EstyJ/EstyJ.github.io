@@ -255,6 +255,8 @@
     margin: 10px 0px;
     display: none;
     padding: 10px 20px;
+    overflow: hidden;
+    overflow-y: scroll;
   }
   .one{
     background-image: url(mobileApp.jpg);
