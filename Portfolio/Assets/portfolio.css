@@ -203,6 +203,20 @@
     height: 30px;
   }
 }
+
+@media screen and (max-width: 792px){
+  .intro h2{
+     font-size: 18px;
+     margin: 2px;
+   }
+}
+
+@media screen and (max-width: 840px){
+  .intro h2{
+     font-size: 18px;
+   }
+ }
+
 @media screen and (max-width: 756px){
   #pop{
     display: none;
@@ -241,8 +255,24 @@
     margin: 10px 0px;
     display: none;
     padding: 10px 20px;
-    overflow: hidden;
-    overflow-y: scroll;
+  }
+  .one{
+    background-image: url(mobileApp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .two{
+    background-image: url(equipment.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .three{
+    background-image: url(sketch.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .img-sample{
     width: 80%;
