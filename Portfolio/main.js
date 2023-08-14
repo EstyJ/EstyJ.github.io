@@ -35,23 +35,23 @@ const text = document.querySelector('.typing');
 
 
 // TEXT ANIMATION
-const textLoad = () => {
-  setTimeout(() => {
-    text.textContent ='Web-Developer';
-  }, 0);
-  setTimeout(() => {
-    text.textContent ='Freelancer';
-  }, 4000);
-  setTimeout(() => {
-    text.textContent ='Tech Coach';
-  }, 8000);
-  setTimeout(() => {
-    text.textContent ='YouTuber';
-  }, 12000);
-}
+// const textLoad = () => {
+//   setTimeout(() => {
+//     text.textContent ='Web-Developer';
+//   }, 0);
+//   setTimeout(() => {
+//     text.textContent ='Freelancer';
+//   }, 4000);
+//   setTimeout(() => {
+//     text.textContent ='Tech Coach';
+//   }, 8000);
+//   setTimeout(() => {
+//     text.textContent ='YouTuber';
+//   }, 12000);
+// }
 
-textLoad();
-setInterval(textLoad, 16000);
+// textLoad();
+// setInterval(textLoad, 16000);
 
 
 // Portfolio page
@@ -80,3 +80,9 @@ control.onclick = (e) => {
     instruction.style.display = 'none';
   }
 }
+
+
+// Contact Page
+
+
+

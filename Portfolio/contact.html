@@ -43,12 +43,12 @@
             <div id="user-details">
               <div>
                 <label for="name">Full-Name:</label>
-                <input type="text" id="name" placeholder="Input Name Here...">
+                <input type="text" id="name" placeholder="Input Name Here..." required>
               </div>
               <br>
               <div>
                 <label for="Email">Email:</label>
-                <input type="text" id="Email" placeholder="Input Email Here...">
+                <input type="text" id="Email" placeholder="Input Email Here..." required>
               </div>
             </div>
             <br>
@@ -76,5 +76,14 @@
       <div class="curve-box box4"></div>
     </main>
   </div>
+
+  <script>
+    const form = document.getElementById("form");
+
+  form.onsubmit = () => {
+    const name = document.getElementById("name").value;
+    alert(`Thank you for your message ${name}`);
+  }
+  </script>
 </body>
 </html>
