@@ -47,6 +47,9 @@ h3{
 }
 
 @media screen and (max-width: 756px) {
+  #body{
+    height: 120vh;
+  }
   #main{
     height: 85%;
   }
@@ -81,5 +84,16 @@ h3{
   .imgMe{
     width: 150px;
     height: 150px;
+  }
+}
+
+
+
+@media screen and (max-width: 756px) and (min-height: 750px){
+  #body{
+    height: 100vh;
+  }
+  #main{
+    height: 85%;
   }
 }

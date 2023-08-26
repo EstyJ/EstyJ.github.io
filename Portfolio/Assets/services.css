@@ -93,14 +93,20 @@ h3{
   text-align: center;
 }
 @media screen and (max-width: 756PX){
+  #body{
+    height: 120vh;
+  }
+  #main{
+    height: 85%;
+    width: 90%;
+  }
   .curve-box{
     display: none;
   }
 }
 @media screen and (max-width: 700px){
   #main{
-    height: 90%;
-    width: 80%;
+    width: 90%;
     margin: 0px auto;
   }
   .curve-box{
@@ -145,18 +151,7 @@ h3{
     padding: 10px auto;
   }
 }
-@media screen and (max-width: 650px){
-  #body{
-    height: 110vh;
-  }
-  #main{
-    height: 90%;
-  }
-}
 @media screen and (max-width: 360px){
-  #body{
-    height: 115vh;
-  }
   .service-item div{
     height: 23%;
   }
@@ -173,13 +168,14 @@ h3{
   }
 }
 
-@media screen and (max-width: 310px){
+
+
+@media screen and (max-width: 756px) and (min-height: 750px){
   #body{
-    height: 150vh;
+    height: 100vh;
+  }
+  #main{
+    height: 85%;
   }
 }
-@media screen and (max-width: 280px){
-  #body{
-    height: 170vh;
-  }
-}
+

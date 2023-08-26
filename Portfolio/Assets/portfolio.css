@@ -218,6 +218,12 @@
  }
 
 @media screen and (max-width: 756px){
+  #body{
+    height: 120vh;
+  }
+  #main{
+    height: 85%;
+  }
   #pop{
     display: none;
   }
@@ -225,38 +231,59 @@
     display: none;
   }
   #display{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    width: 100%;
     height: 50%;
-    width: 100%;
+    display: block;
+    position: relative;
+    padding: 30px 0px;
+    /* background-color: green; */
   }
-  #control{
+  .content{
     width: 100%;
-    height: 10%;
+    height: 100%;
     display: flex;
-    justify-content: space-around;
-  }
-  #instruction{
-    font-size: clamp(0.8rem, 1.2rem + 0.8rem, 1.2rem);
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    scale: 0.1;
-    animation: long 10s ease-in 1s 1 forwards;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
   .pic{
-    width: 100%;
-    height: 85%;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
     margin: 10px 0px;
-    display: none;
-    padding: 10px 20px;
+    padding: 0px 25px;
     overflow: hidden;
     overflow-y: scroll;
+  }
+  .pic p{
+    text-align: center;
+  }
+  #control{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    pointer-events: none;
+  }
+  #control a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0px 5px;
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+  }
+  #control a:hover{
+    opacity: 1;
   }
   .one{
     background-image: url(mobileApp.jpg);
@@ -300,14 +327,6 @@
     }
   }
 }
-@media screen and (max-width: 376px) {
-  #body{
-    height: 120vh;
-  }
-  #main{
-    height: 90%;
-  }
-}
 @media screen and (max-width: 500px){
   #rate{
     grid-template-columns: repeat(2,1fr);
@@ -316,5 +335,15 @@
 @media screen and (max-width: 400px){
   h3{
     font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 756px) and (min-height: 750px){
+  #body{
+    height: 100vh;
+  }
+  #main{
+    height: 85%;
   }
 }

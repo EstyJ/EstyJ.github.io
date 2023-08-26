@@ -36,9 +36,9 @@ textarea{
 }
 #buttons button{
   padding: 5px 15px;
-  background-color: teal;
+  background-color: white;
   outline: none;
-  color: #fff;
+  color: teal;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -100,6 +100,22 @@ i{
 #socials a:hover::before{
   animation: design 0.3s linear 0s 1 forwards;
 }
+
+
+#form fieldset{
+  background-color: teal;
+  border-radius: 10px;
+  border: none;
+  margin: 0 auto;
+}
+#form fieldset legend{
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 6px 11px;
+  text-align: center;
+}
+
+
 @keyframes design {
   50%{
     width: 60%;
@@ -125,7 +141,7 @@ i{
 }
 @media screen and (max-width: 756px){
   #main{
-    height: 90% !important;
+    height: 85%;
   }
   .curve-box{
     display: none;
@@ -162,7 +178,6 @@ i{
 @media screen and (max-width: 533px) {
   #main{
     width: 90%;
-    height: 80%;
   }
   #form{
     width: 90%;
@@ -176,6 +191,19 @@ i{
 }
 @media screen and (max-width: 376px) {
   #body{
-    height: 110vh;
+    height: 120vh;
+  }
+  #main{
+    height: 85%;
+  }
+}
+
+
+@media screen and (max-width: 756px) and (min-height: 750px){
+  #body{
+    height: 100vh;
+  }
+  #main{
+    height: 85%;
   }
 }
